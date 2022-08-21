@@ -1,18 +1,24 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'vision-camera-scan-barcode';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import { scanCodeFromLibrary } from 'vision-camera-scan-barcode';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<number[]>([]);
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const selectImage = () => {
+    scanCodeFromLibrary()
+      .then(setResult)
+      .catch(console.log)
+  }
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>List code:</Text>
+      {
+        result.map(item => <Text key={item}>{item}</Text>)
+      }
+      <Button title={"Select Image"} onPress={selectImage}/>
     </View>
   );
 }
@@ -22,10 +28,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });

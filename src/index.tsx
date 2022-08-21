@@ -14,7 +14,7 @@ const VisionCameraScanBarcode = NativeModules.VisionCameraScanBarcode  ? NativeM
         },
       }
     );
-
-export function multiply(a: number, b: number): Promise<number> {
-  return VisionCameraScanBarcode.multiply(a, b);
+    
+export function scanCodeFromLibrary(): Promise<number[]> {
+  return VisionCameraScanBarcode.scanCodeFromLibrary();
 }

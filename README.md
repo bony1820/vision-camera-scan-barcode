@@ -9,11 +9,11 @@ npm install vision-camera-scan-barcode
 ## Usage
 
 ```js
-import { multiply } from "vision-camera-scan-barcode";
+import { scanCodeFromLibrary } from 'vision-camera-scan-barcode';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await scanCodeFromLibrary();
 ```
 
 ## Contributing

@@ -123,9 +123,11 @@ repositories {
 
 
 dependencies {
-    //noinspection GradleDynamicVersion
+  //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
-// From node_modules
+  implementation 'com.google.mlkit:barcode-scanning:17.0.2'
+  // From node_modules
+
 }
 
 if (isNewArchitectureEnabled()) {
