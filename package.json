@@ -35,13 +35,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/tuyenbug/vision-camera-scan-barcode",
-  "author": "tuyenbug <tuyen.nguyen5@ntq-solution.com.vn> (https://github.com/tuyenbug)",
-  "license": "MIT",
+  "repository": "",
+  "author": "",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/tuyenbug/vision-camera-scan-barcode/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/tuyenbug/vision-camera-scan-barcode#readme",
+  "homepage": "",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
